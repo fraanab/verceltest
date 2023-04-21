@@ -1,5 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
-    
+    {% for note in allnotes %}
+    <div class="note">
+    	<p class="by">{{note.username}}</p>
+    	<p class="content">{{note.text}}</p>
+    </div>
+    {% endfor %}
+
+
+    <style>
+    	.note{
+    		width: 320px;
+    		height: 200px;
+    		background: #222;
+    		
+    		margin: 20px 20px 20px 0;
+    		border-radius: 10px;
+    		padding: 10px;
+    		display: inline-block;
+    	}
+    	.by{
+    		font-family: sans-serif;
+    		color: #399;
+    		font-weight: bold;text-transform: uppercase;
+    		text-align:center;
+    		margin-top: 10px;
+    	}
+    </style>
 {% endblock content %}
