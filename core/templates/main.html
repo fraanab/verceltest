@@ -1,13 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-    {% for note in allnotes %}
     <div class="note">
-    	<p class="by">{{note.username}}</p>
-    	<p class="content">{{note.text}}</p>
+        <div class="by">By me</div>
     </div>
-    {% endfor %}
-
 
     <style>
     	.note{
